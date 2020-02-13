@@ -8,7 +8,10 @@ def main():
     message = input()
     if message == 'code':
         print('Отлично! Пиши сообщение на латинице:')
-        print(*coding.encode_to_morse(input()))
+        print(coding.encode_to_morse(input()))
     elif message == 'decode':
         print('Пиши, американский шпион...')
-        print(*decode.decode_from_morse(input()))
+        print(decode.decode_from_morse(input()))
+
+
+main()
