@@ -1,5 +1,6 @@
 def decode_from_morse(code):
     dicti = {}
+    dicti['-...-'] = ' '
     morse = '''A,.-
     B,-...
     W,.--
@@ -46,7 +47,6 @@ def decode_from_morse(code):
     /,-..-.
     ?,..--..
     !,--..--
-    space,-...-
     error,........
     @,.--.-.'''
     morse = morse.split('\n')
@@ -55,4 +55,5 @@ def decode_from_morse(code):
         dicti[morse[i][morse[i].find(',') + 1:]] = morse[i][0]
     message = code.split()
     message = [dicti[i] for i in message]
+    message = ''.join(message)
     return message
